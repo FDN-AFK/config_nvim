@@ -78,36 +78,6 @@ vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], { noremap = true, silent = t
 vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], { noremap = true, silent = true })
 vim.keymap.set('t', '<C-w>', [[<Cmd>exit<CR>]], { noremap = true, silent = true })
 
--- Terminal Split Window
-vim.keymap.set('n', '<leader>ts', '<cmd>ToggleTerm<CR>', { desc = '[T]oggle [T]erminal', noremap = true, silent = true }) -- split window vertically
-vim.keymap.set(
-    'n',
-    '<leader>tf',
-    '<cmd>ToggleTerm size=40 dir=~/Documents direction=float<CR>',
-    { desc = '[T]erminal [F]loatting', noremap = true, silent = true }
-)
-
-vim.keymap.set(
-    'n',
-    '<leader>th',
-    '<cmd>ToggleTerm size=20 dir=~/Documents direction=horizontal<CR>',
-    { desc = '[T]erminal [H]oritzontally', noremap = true, silent = true }
-)
-
-vim.keymap.set(
-    'n',
-    '<leader>tv',
-    '<cmd>ToggleTerm size=40 dir=~/Documents direction=vertical<CR>',
-    { desc = '[T]erminal [V]ertically', noremap = true, silent = true }
-)
-
-vim.keymap.set(
-    'n',
-    '<leader>tt',
-    '<cmd>ToggleTerm dir=~/Documents direction=tab name=documents<CR>',
-    { desc = '[T]erminal [T]ab', noremap = true, silent = true }
-)
-
 -- Window management
 vim.keymap.set('n', '<leader>v', '<C-w>v', { desc = 'Split Vertically', noremap = true, silent = true }) -- split window vertically
 vim.keymap.set('n', '<leader>h', '<C-w>s', { desc = 'Split Horizontally', noremap = true, silent = true }) -- split window horizontally
@@ -121,10 +91,10 @@ vim.keymap.set('n', '<C-h>', ':wincmd h<CR>', opts)
 vim.keymap.set('n', '<C-l>', ':wincmd l<CR>', opts)
 
 -- Tabs
-vim.keymap.set('n', '<leader>to', ':tabnew<CR>', { desc = 'Open a new Tab', noremap = true, silent = true }) -- open new tab
-vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', { desc = 'Close current Tab', noremap = true, silent = true }) -- close current tab
-vim.keymap.set('n', '<leader>tn', ':tabn<CR>', { desc = 'Go to next Tab', noremap = true, silent = true }) --  go to next tab
-vim.keymap.set('n', '<leader>tp', ':tabp<CR>', { desc = 'Go to previous Tab', noremap = true, silent = true }) --  go to previous tab
+vim.keymap.set('n', '<leader>to', ':tabnew<CR>', { desc = 'Tab: Open a new', noremap = true, silent = true }) -- open new tab
+vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', { desc = 'Tab: Close current', noremap = true, silent = true }) -- close current tab
+vim.keymap.set('n', '<leader>tn', ':tabn<CR>', { desc = 'Tab: Go to next', noremap = true, silent = true }) --  go to next tab
+vim.keymap.set('n', '<leader>tp', ':tabp<CR>', { desc = 'Tab: Go to previous', noremap = true, silent = true }) --  go to previous tab
 
 -- Toggle line wrapping
 vim.keymap.set('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)

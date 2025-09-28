@@ -116,7 +116,6 @@ return {
                         end,
                     })
                 end
-
                 -- The following code creates a keymap to toggle inlay hints in your
                 -- code, if the language server you are using supports them
                 -- NOTE: I'm not sure it's working as intended.
@@ -182,7 +181,10 @@ return {
                         runtime = { version = 'LuaJIT' },
                         workspace = {
                             checkThirdParty = false,
-                            library = vim.api.nvim_get_runtime_file('', true),
+                            library = {
+                                '${3rd}/love2d/library',
+                                vim.api.nvim_get_runtime_file('', true),
+                            },
                         },
                         diagnostics = {
                             globals = { 'vim' },

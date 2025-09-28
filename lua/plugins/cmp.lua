@@ -76,24 +76,16 @@ return {
                     luasnip.lsp_expand(args.body)
                 end,
             },
-            -- appearance = {
-            --     menu = {
-            --         direction = 'above', -- auto or above or below
-            --     },
-            -- },
-            -- performance = {
-            --     max_view_entries = 7,
-            -- },
             view = {
                 docs = {
-                    auto_open = true, -- or false to not show DOCUMENTATION
+                    auto_open = true,
                 },
             },
 
             window = {
 
                 completion = {
-                    border = { '🭽', '▔', '🭾', '▕', '🭿', '▁', '🭼', '▏' },
+                    -- border = { '🭽', '▔', '🭾', '▕', '🭿', '▁', '🭼', '▏' },
                     list = {
                         selection = 'auto_insert',
                     },
@@ -134,7 +126,8 @@ return {
                 -- Accept ([y]es) the completion.
                 --  This will auto-import if your LSP supports it.
                 --  This will expand snippets if the LSP sent a snippet.
-                ['<C-y>'] = cmp.mapping.confirm { select = true },
+                -- ['<C-y>'] = cmp.mapping.confirm { select = true },
+                ['<CR>'] = cmp.mapping.confirm { select = true },
 
                 -- If you prefer more traditional completion keymaps,
                 -- you can uncomment the following lines
